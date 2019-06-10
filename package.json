@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/arti-zachara/19.1-Redux-Comments/issues"
   },
-  "homepage": "https://github.com/arti-zachara/19.1-Redux-Comments#readme"
+  "homepage": "https://github.com/arti-zachara/19.1-Redux-Comments#readme",
+  "dependencies": {
+    "uuid": "^3.3.2"
+  }
 }
