@@ -17,14 +17,14 @@ export function comments(state = [], action) {
           text: action.text,
           rating: 0
         },
-        ...state.comments
+        ...state
       ];
 
     case REMOVE_COMMENT:
-      return state.comments.filter(comment => comment.id !== action.id);
+      return state.filter(comment => comment.id !== action.id);
 
     case EDIT_COMMENT:
-      return state.comments.map(comment => {
+      return state.map(comment => {
         if (comment.id === action.id) {
           return Object.assign({}, comment, {
             text: action.text
@@ -35,7 +35,7 @@ export function comments(state = [], action) {
       });
 
     case THUMB_UP_COMMENT:
-      return state.comments.map(comment => {
+      return state.map(comment => {
         if (comment.id === action.id) {
           return Object.assign({}, comment, {
             rating: action.rating + 1
@@ -46,7 +46,7 @@ export function comments(state = [], action) {
       });
 
     case THUMB_DOWN_COMMENT:
-      return state.comments.map(comment => {
+      return state.map(comment => {
         if (comment.id === action.id) {
           return Object.assign({}, comment, {
             rating: action.rating - 1
