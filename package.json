@@ -22,6 +22,6 @@
   },
   "homepage": "https://github.com/arti-zachara/19.1-Redux-Comments#readme",
   "dependencies": {
-    "uuid": "^3.3.2"
+    "uuid": "^14.0.0"
   }
 }
